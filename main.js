@@ -83,12 +83,20 @@ let squadre = [
     }
 ];
 
+let squadreUpdate = [];
+
 for (let y = 0; y < squadre.length; y++) {
     squadre[y]["punti fatti"] = randomNum(0, 80);
     squadre[y]["falli subiti"] = randomNum(0, 20);
+
+    squadreUpdate[y] = {
+
+        'nome': squadre[y].nome,
+        'falli subiti': squadre[y]["falli subiti"]
+    }
 }
-
-
+console.log("squadre: ", squadre)
+console.log("squadre aggiornate: ", squadreUpdate)
 
 // Snack 3 (Bonus)
 // Scrivere una funzione che accetti tre argomenti, un array ( esempio: ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'] )e due numeri (a più piccolo di b).
