@@ -8,20 +8,49 @@
 const bici = [
     {
         nome: "Mountain Bike Classic",
-        weight: 28
+        weight: 9
     },
     {
-        nome: "Mountain Bike Light",
-        weight: 16
+        nome: "Mountain Bike Energy",
+        weight: 22
     },
     {
-        nome: "Mountain Bike Heavy",
-        weight: 37
+        nome: "Mountain Bike Blue",
+        weight: 13
     }
 ]
-//metodo 1
-console.log(bici);
-console.log(`la bici che pesa meno pesa ${bici[1].weight}kg ed è la ${bici[1].nome}`)
+// metodo 1
+// console.log(bici);
+// console.log(`la bici che pesa meno pesa ${bici[1].weight}kg ed è la ${bici[1].nome}`)
+
+// metodo 2
+function trovaMinore (arrayObj) {
+    for (let i = 0; i < arrayObj.length; i++) {
+        for (let x = i+1; x < arrayObj.length; x++) {
+            if (arrayObj[i].weight <= arrayObj[x].weight) {
+                if (x == (arrayObj.length - 1)) {
+                    index = i;
+                    x = arrayObj.length + 1;
+                    i = arrayObj.length + 1;
+                } else {
+                    index = i;
+                }
+            } else {
+                if ((x == (arrayObj.length - 1) && (i == (arrayObj.length - 2)))) {
+                    index = x;
+                } else {
+                    x = arrayObj.length + 1;
+                }
+            }
+        }
+    }
+
+    return index;
+};
+let index;
+index = trovaMinore(bici);
+
+console.log(`la bici che pesa meno pesa ${bici[index].weight}kg ed è la ${bici[index].nome}`)
 
 
 
