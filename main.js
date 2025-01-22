@@ -8,17 +8,20 @@
 const bici = [
     {
         nome: "Mountain Bike Classic",
-        weight: 120
+        weight: 28
     },
     {
         nome: "Mountain Bike Light",
-        weight: 90
+        weight: 16
     },
     {
         nome: "Mountain Bike Heavy",
-        weight: 160
+        weight: 37
     }
 ]
+//metodo 1
+console.log(bici);
+console.log(`la bici che pesa meno pesa ${bici[1].weight}kg ed è la ${bici[1].nome}`)
 
 
 
