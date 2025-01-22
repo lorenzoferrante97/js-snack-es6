@@ -5,7 +5,20 @@
 // Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 // Stampare a schermo la bici con peso minore.
 
-
+const bici = [
+    {
+        nome: "Mountain Bike Classic",
+        weight: 120
+    },
+    {
+        nome: "Mountain Bike Light",
+        weight: 90
+    },
+    {
+        nome: "Mountain Bike Heavy",
+        weight: 160
+    }
+]
 
 
 
