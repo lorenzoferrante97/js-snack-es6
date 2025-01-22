@@ -103,3 +103,23 @@ console.log("squadre aggiornate: ", squadreUpdate)
 // La funzione ritornerà un nuovo array con li elementi estratti dall'array di partenza che hanno la posizione compresa tra i due numeri (a e b).
 
 // start bonus
+
+function estraiRange (array, min, max) {
+
+    let arrayNew = [];
+
+    for (let z = min; z <= max; z++) {
+        arrayNew.push(array[z]);
+    }
+
+    return arrayNew;
+}
+
+let videogames = ["Dark Souls", "Bloodborne", "Sekiro", "Elden Ring", "Nightreign", "Demon Souls"];
+const primo = 1;
+const ultimo = 3;
+
+let videogamesRange = estraiRange(videogames, primo, ultimo);
+
+console.log("Lista Videogames: ", videogames)
+console.log(`Videogames estratti (dal n.${primo+1} al n.${ultimo+1}): `, videogamesRange)
