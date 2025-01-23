@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="background-color: black; color: hsl(1, 0%, 72%);">
+
+    <main id="wrapper" class="flex direction-col gap-20">
+
+        <h1>Lista Videogames</h1>
+        <!-- grid -->
+        <section class="grid flex centered-content gap-20 w-100 wrap" id="elencoVideogames">
+            <!-- elenco videogames -->
+        </section>
+
+        <!-- scelta range -->
+        <h2>Scegli un range di massimo 3 videogames e scopri quali hai vinto</h2>
+        <p id="errorMessage" class="error hide"></p>
+        <form class="flex gap-20">
+            <div class="flex gap-20">
+                <div class="flex gap-20 centered-content direction-col">
+                    <label for="rangeMin">Num Min</label>
+                    <input type="number" name="rangeMin" id="rangeMin" min="1" max="12">
+                </div>
+                <div class="flex direction-col gap-20 centered-content">
+                    <label for="rangeMin">Num Max</label>
+                    <input type="number" name="rangeMax" id="rangeMax" min="1" max="12">
+                </div>
+            </div>
+            <button type="submit" id="check">Scopri i risultati</button>
+        </form>
+
+    </main>
     
     <script src="main.js"></script>
+    <script src="bonusplus.js"></script>
 </body>
 </html>
